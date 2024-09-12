@@ -1,0 +1,194 @@
+#container {
+    border: 3px double rgb(41, 56, 107);
+    background-image: url(winter01.jpg);
+    background-size: cover;
+    width: 600px;
+    margin: auto;
+    border-radius: 5%;
+    position: relative;
+    text-align: center;
+}
+
+:root {
+    --vol-thumb-appearance: none;
+    --vol-thumb-cursor: pointer;
+    --vol-thumb-border-radius: 50%;
+    --vol-thumb-width: 11px;
+    --vol-thumb-height: 11px;
+    --vol-thumb-background-color: rgb(32, 75, 131);
+
+    --progress-appearance: none;
+    --progress-cursor: pointer;
+    --progress-border-radius: 50%;
+    --progress-background-color: rgb(145, 39, 21);
+    --progress-width: 4px;
+    --progress-height: 4px;
+    --progress-hover-width: 10px;
+    --progress-hover-height: 10px;
+    --progress-transition: 0.3s;
+}
+
+#container>select {
+    width: 95%;
+    height: 30px;
+    background-image: url(winter01.jpg);
+    border-color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14pt;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#picture {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    z-index: 10;
+}
+
+#controlBtn {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+div>div>span {
+    font-family: webdings;
+    font-size: 2rem;
+    color: rgb(51, 14, 187);
+    cursor: pointer;
+    border: 2px solid rgb(64, 171, 233);
+    padding: 6px;
+    box-shadow: 1px 2px 2px black;
+    border-radius: 50%;
+    background-color: white;
+}
+
+div>div>span:hover {
+    border: 2.5px solid rgb(64, 171, 233);
+    background-color: rgb(255, 249, 215);
+    box-shadow: 2px 3px 3px black;
+}
+
+#container>input[type="range"] {
+    appearance: none;
+    width: 95%;
+    height: 4px;
+    margin-bottom: 3px;
+}
+
+#container>input[type="range"]::-webkit-slider-thumb {
+    appearance: var(--progress-appearance);
+    width: var(--progress-width);
+    height: var(--progress-height);
+    cursor: var(--progress-cursor);
+    background-color: var(--progress-background-color);
+}
+
+#container>input[type="range"]::-moz-range-thumb {
+    appearance: var(--progress-appearance);
+    width: var(--progress-width);
+    height: var(--progress-height);
+    cursor: var(--progress-cursor);
+    background-color: var(--progress-background-color);
+}
+
+#container>input[type="range"]::-webkit-slider-thumb:hover {
+    width: var(--progress-hover-width);
+    height: var(--progress-hover-height);
+    border-radius: var(--progress-border-radius);
+    cursor: var(--progress-cursor);
+    background-color: var(--progress-background-color);
+    transition: var(--progress-transition);
+}
+
+#container>input[type="range"]::-moz-range-thumb:hover {
+    width: var(--progress-hover-width);
+    height: var(--progress-hover-height);
+    border-radius: var(--progress-border-radius);
+    cursor: var(--progress-cursor);
+    background-color: var(--progress-background-color);
+    transition: var(--progress-transition);
+}
+
+#volControl>input[type="range"] {
+    appearance: none;
+    width: 81%;
+    height: 4px;
+}
+
+#volControl>input[type="range"]::-webkit-slider-thumb {
+    appearance: var(--vol-thumb-appearance);
+    width: var(--vol-thumb-width);
+    height: var(--vol-thumb-height);
+    border-radius: var(--vol-thumb-border-radius);
+    cursor: var(--vol-thumb-cursor);
+    background-color: var(--vol-thumb-background-color);
+}
+
+#volControl>input[type="range"]::-moz-range-thumb {
+    appearance: var(--vol-thumb-appearance);
+    width: var(--vol-thumb-width);
+    height: var(--vol-thumb-height);
+    border-radius: var(--vol-thumb-border-radius);
+    cursor: var(--vol-thumb-cursor);
+    background-color: var(--vol-thumb-background-color);
+}
+
+#volControl>input[type="button"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#volControl>input[type="text"] {
+    font-size: 0.7rem;
+    text-align: center;
+    width: 20px;
+    color: rgb(239, 230, 248);
+    background-color: rgb(45, 29, 113);
+}
+
+.btnBColor {
+    background-color: rgb(255, 249, 215);
+    border: 2.5px solid rgb(64, 171, 233);
+    box-shadow: 2px 3px 3px black;
+}
+
+#info {
+    font-size: 14pt;
+    margin-bottom: 5px;
+}
+
+#book {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#book>div {
+    width: 298px;
+    height: 130px;
+    border: 1px solid rgb(175, 175, 175);
+    overflow: auto;
+}
+
+#book>div>div {
+    cursor: pointer;
+    text-align: center;
+    padding: 3px;
+    border-bottom: 1px dotted rgb(179, 176, 176);
+}
+
+#book>section {
+    width: 600px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+#book>section>button {
+    cursor: pointer;
+}

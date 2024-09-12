@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <link rel="stylesheet" href="player.css">
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <audio id="audio"></audio>
+        </div>
+        <img id="picture" src="logo.png">
+        <select name="song" id="songPool" onchange="changeSong(0)"></select>
+        <input id="progress" oninput="setProgress()" type="range" value="0" max="5000">
+        <div id="volControl">
+            <input oninput="getVolumeBar()" type="range" value="100">
+            <input onclick="setVolume(-10)" type="button" value="-">
+            <input onclick="setVolume(10)" type="button" value="+">
+            <input type="text" value="100" readonly>
+        </div>
+        <div id="controlBtn">
+            <span onclick="playMusic()" title="撥放">4</span>
+            <span onclick="stopMusic()" title="音樂停止">&lt</span>
+            <span onclick="changeSong(-1)" title="上一首">9</span>
+            <span onclick="changeTime(-10)" title="倒轉">7</span>
+            <span onclick="changeTime(10)" title="快轉">8</span>
+            <span onclick="changeSong(1)" title="下一首">:</span>
+            <span onclick="muteMusic()" title="靜音">V</span>
+            <span onclick="setFuncBtnState()" title="單曲循環">q</span>
+            <span onclick="setFuncBtnState()" title="隨機撥放">~</span>
+            <span onclick="setFuncBtnState()" title="全曲循環">`</span>
+            <span onclick="showMusicList()" title="我的歌單">@</span>
+        </div>
+        <div id="info">
+            <div>請按下撥放按鈕</div>
+            <div>正常</div>
+            <div>0:00/0:00</div>
+        </div>
+        <div id="book" class="setHide">
+            <div ondrop="drop(event)" ondragover="allowDrop(event)"> <!-- source -->
+                <div title="music/Love.mp3">First Love</div>
+                <div title="music/Bottle.mp3">Genie in a Bottle</div>
+                <div title="music/Round.mp3">Round and round</div>
+                <div title="music/Criminal.mp3">Smooth Criminal</div>
+                <div title="music/Time.mp3">Time after time</div>
+            </div>
+            <div ondrop="drop(event)" ondragover="allowDrop(event)"> <!-- 選好的歌 -->
+
+            </div>
+            <section>
+                <button type="button" onclick="updateMusicPool()">更新歌單</button>
+            </section>
+        </div>
+    </div>
+
+    <script src="player.js"></script>
+</body>
+
+</html>
